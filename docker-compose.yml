@@ -17,6 +17,8 @@ services:
       - "7077:7077"
       # - "4040:4040"
       - '8520:8080'
+    networks:
+      - data_collection_network
       
   spark-worker:
     image: docker.io/bitnami/spark:4.0
@@ -32,3 +34,5 @@ services:
       - SPARK_USER=spark
     ports:
       - "18081:8081"
+    networks:
+      - data_collection_network
