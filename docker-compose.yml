@@ -4,7 +4,7 @@ networks:
     name: data_collection_network
 
 services:
-  spark:
+  spark-master:
     image: docker.io/bitnami/spark:4.0
     environment:
       - SPARK_MODE=master
